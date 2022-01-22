@@ -1,28 +1,15 @@
-# IRDenon
-Web Interface to remote control a Denon AVR with an ESP8266 and a infrared led or the Room to Room connection.
+# IRYamaha
 
-![denon rear](images/web-interface.PNG)
+I based this fork on aamarioneta/IRDenon as well as devjklein/yamaha-rx-v363-ir-codes (https://github.com/devjklein/yamaha-rx-v363-ir-codes). The esphome configuration allows for remote controlling a Yamaha RX-V863 (and probably other models) via Home Assistant through a jack 3.5mm plug in the "remote in" port of the receiver. I used a mono plug and connected it to ground and D2 connectors of a Wemos D1 mini ESP8266 board.
 
-There are 4 ways to remote control older Denon AVR's (in my case Denon AVR 2308):
-1. by remote: my AVR is inside a tv console and there is no line of sight.
-2. by RS232: i managed to remote control it by connecting the COM Port of an old PC (which still has a COM port interface) and it worked perfectly. I just did not want another PC running. My first intention was to connect the ESP8266 Serial port to the Denon COM Port but I just could not get it working.
-3. Infrared extender / blaster (you can get one for 10-15€) but what's the fun in that? This repo can be used for emitting IR signals through a IR led.
-4. Using the "Room to Room" "REMOTE CONTROL" or whatever it's called. Some AVR have the possibility to control other devices in other rooms for example. This is just a jack input for the same signals as for the IR led. This repo can also be used for emitting IR signals through the jack input without the need of a IR led. See your Denon manual
+I used the following 3D print model as a case for the Wemos board:
+https://www.thingiverse.com/thing:2847539/files
 
-![denon rear](images/denon-rear.PNG)
+The codes on devjklein's repo are confirmed to work with the RX-V363, most also work with the RX-V863. I defined a number of services in my yaml file, in addition it is possible to apply other codes through a generic service call in Home Assistant developer tools. 
 
-## Installation
-- Copy credentials.h.sample to credentials.h and edit the SSID and password for your WiFi.
-- For controlling a IR led (3) connect the NPN transistor and IR led as described here:
-https://github.com/crankyoldgit/IRremoteESP8266/wiki#ir-sending
-- For controlling direct the "Room to Room" "REMOTE CONTROL": connect a 2 wire cable with a mono jack to ground and D2 on the ESP8266. You can also use a mono headphone cable or a stereo headphone cable (just connect the 2 channels together).
+ESPHome: esp_yamaha_remote_1code or ESPHome: esp_yamaha_remote_2code
 
-![remote jack](images/IMG_20200223_090247_1.jpg)
+For a complete overview of codes refer to:
 
-Upload the INO file to the ESP8266.
+Extended_IR_Codes_RX-V685RX-A780-RX-A3080CX-A5200_6.pdf
 
-You can get the IP address of the ESP8266 from the serial output or from your router. I configured the router to always give the ESP8266 the same IP.
-
-You can test the IR led by looking at it with any phone camera, or by replacing the IR led with a normal led. It should blink when you use the web interface.
-
-Currently only the basic functions implemented, but other codes can easly be read with a IR receiver diode, see for example here: https://github.com/crankyoldgit/IRremoteESP8266/wiki#ir-receiving.
