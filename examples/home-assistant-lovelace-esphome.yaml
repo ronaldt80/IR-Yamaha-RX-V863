@@ -1,21 +1,56 @@
-type: horizontal-stack
+type: vertical-stack
 cards:
-  - type: button
-    name: Vol Down
-    tap_action:
-      action: call-service
-      service: esphome.denon_receiver_volume_down
-    icon: 'mdi:volume-minus'
-  - type: button
-    name: Vol Up
-    tap_action:
-      action: call-service
-      service: esphome.denon_receiver_volume_up
-    icon: 'mdi:volume-plus'
-    entity: switch.denon
-  - type: button
-    name: Mute
-    tap_action:
-      action: call-service
-      service: esphome.denon_receiver_mute
-    icon: 'mdi:volume-mute'
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: Vol Down
+        tap_action:
+          action: call-service
+          service: esphome.esp_yamaha_volume_down
+          service_data: {}
+          target: {}
+        icon: mdi:volume-minus
+      - type: button
+        name: Vol Up
+        tap_action:
+          action: call-service
+          service: esphome.esp_yamaha_volume_up
+        icon: mdi:volume-plus
+      - type: button
+        name: Power on
+        tap_action:
+          action: call-service
+          service: esphome.esp_yamaha_power_on
+        icon: mdi:power-on
+      - type: button
+        name: Power off
+        tap_action:
+          action: call-service
+          service: esphome.esp_yamaha_power_off
+        icon: mdi:power-off
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: Spotify
+        tap_action:
+          action: call-service
+          service: esphome.esp_yamaha_select_volumio
+        icon: mdi:spotify
+      - type: button
+        name: TV
+        tap_action:
+          action: call-service
+          service: esphome.esp_yamaha_select_tv
+        icon: mdi:television-play
+      - type: button
+        name: Mibox
+        tap_action:
+          action: call-service
+          service: esphome.esp_yamaha_select_mibox
+        icon: mdi:filmstrip
+      - type: button
+        name: DVD
+        tap_action:
+          action: call-service
+          service: esphome.esp_yamaha_select_dvd
+        icon: mdi:movie
