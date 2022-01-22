@@ -1,6 +1,6 @@
 # IRYamaha
 
-I based this fork on aamarioneta/IRDenon as well as devjklein/yamaha-rx-v363-ir-codes (https://github.com/devjklein/yamaha-rx-v363-ir-codes). The esphome configuration allows for remote controlling a Yamaha RX-V863 (and probably other models) via Home Assistant through a jack 3.5mm plug in the "remote in" port of the receiver. I used a mono plug and connected it to ground and D2 connectors of a Wemos D1 mini ESP8266 board.
+I based this fork on aamarioneta/IRDenon as well as devjklein/yamaha-rx-v363-ir-codes (https://github.com/devjklein/yamaha-rx-v363-ir-codes) and used some of the home assistant yaml code of @aneisch. The esphome configuration allows for remote controlling a Yamaha RX-V863 (and probably other models) via Home Assistant through a jack 3.5mm plug in the "remote in" port of the receiver. I used a mono plug and connected it to ground and D2 connectors of a Wemos D1 mini ESP8266 board.
 
 I used the following 3D print model as a case for the Wemos board:
 https://www.thingiverse.com/thing:2847539/files
