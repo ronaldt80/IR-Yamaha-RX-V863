@@ -13,3 +13,6 @@ For a complete overview of codes refer to:
 
 https://github.com/ronaldt80/IR-Yamaha-RX-V863/blob/master/Extended_IR_Codes_RX-V685RX-A780-RX-A3080CX-A5200_6.pdf
 
+In the examples I included my card in home assistant which allows me to use the basic controls:
+
+![image](https://user-images.githubusercontent.com/53364332/150644061-5adbca07-7db1-4e25-93f3-7bfdd5bd3a7a.png)
