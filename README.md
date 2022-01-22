@@ -11,5 +11,5 @@ ESPHome: esp_yamaha_remote_1code or ESPHome: esp_yamaha_remote_2code
 
 For a complete overview of codes refer to:
 
-Extended_IR_Codes_RX-V685RX-A780-RX-A3080CX-A5200_6.pdf
+https://github.com/ronaldt80/IR-Yamaha-RX-V863/blob/master/Extended_IR_Codes_RX-V685RX-A780-RX-A3080CX-A5200_6.pdf
 
